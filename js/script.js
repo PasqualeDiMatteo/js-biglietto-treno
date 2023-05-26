@@ -23,3 +23,13 @@ const ageSenior = 65;
 const ageMinors = 18;
 const discountSenior = 40;
 const discountMinors = 20;
+
+// Ask Km and Age
+
+const userAge = parseInt(prompt("How old is the passenger?", "35"));
+const kilometers = parseInt(
+  prompt("How many kilometers do you have to travel?", "600")
+);
+
+console.log(userAge + " Age");
+console.log(kilometers + " Km");
