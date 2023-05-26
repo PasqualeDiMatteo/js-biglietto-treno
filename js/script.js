@@ -54,7 +54,7 @@ if (!isValid) {
   alert(error);
 } else {
   let priceTicket = kilometers * priceKm;
-  console.log(priceTicket);
+  console.log(priceTicket.toFixed(2));
 
   let priceDiscounted = priceTicket;
 
@@ -64,5 +64,5 @@ if (!isValid) {
     priceDiscounted = priceTicket - (priceTicket * discountSenior) / 100;
   }
 
-  console.log(priceDiscounted);
+  console.log(priceDiscounted.toFixed(2));
 }
