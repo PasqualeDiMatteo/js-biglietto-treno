@@ -24,7 +24,7 @@ const ageMinors = 18;
 const discountSenior = 40;
 const discountMinors = 20;
 
-// Ask Km and Age
+// 2. 3. Ask Km and Age
 
 const userAge = parseInt(prompt("How old is the passenger?", "35"));
 const kilometers = parseInt(
@@ -33,3 +33,20 @@ const kilometers = parseInt(
 
 console.log(userAge + " Age");
 console.log(kilometers + " Km");
+
+// 4. Validation
+
+// 5. 6. 7. 8. Calculated the price of the ticket and the discounted ticket
+
+let priceTicket = kilometers * priceKm;
+console.log(priceTicket);
+
+let priceDiscounted = priceTicket;
+
+if (userAge < ageMinors) {
+  priceDiscounted = priceTicket - (priceTicket * discountMinors) / 100;
+} else if (userAge > ageSenior) {
+  priceDiscounted = priceTicket - (priceTicket * discountSenior) / 100;
+}
+
+console.log(priceDiscounted);
