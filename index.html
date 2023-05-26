@@ -9,13 +9,32 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css'
         integrity='sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=='
         crossorigin='anonymous' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
     <title>Biglietto del treno</title>
 </head>
 
 <body>
-
+    <div class="container mt-5">
+        <div class="card">
+            <img src="img/1023x440_collegamenti-Frecciarossa_03-23.jpg" class="card-img-top" alt="...">
+            <div class="card-body d-flex">
+                <div class="w-50">
+                    <h4 class="card-title">Il Tuo biglietto</h4>
+                    <p class="card-text">Prezzo intero: <span id="price-ticket"></span></p>
+                    <p class="card-text" id="discount-ticket"></p>
+                </div>
+                <div class="w-50">
+                    <h4>Info Utete</h4>
+                    <h6>Anni</h6>
+                    <div id="age" class="pr-3"></div>
+                    <h6>Tratta</h6>
+                    <div id="km"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

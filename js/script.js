@@ -23,6 +23,10 @@ const ageSenior = 65;
 const ageMinors = 18;
 const discountSenior = 40;
 const discountMinors = 20;
+const pricePlaceholder = document.getElementById("price-ticket");
+const discountedPlaceholder = document.getElementById("discount-ticket");
+const agePlaceholder = document.getElementById("age");
+const kmPlaceholder = document.getElementById("km");
 
 // 2. 3. Ask Km and Age
 
@@ -65,4 +69,11 @@ if (!isValid) {
   }
 
   console.log(priceDiscounted.toFixed(2));
+
+  pricePlaceholder.innerText = `${priceTicket.toFixed(2)}€`;
+  discountedPlaceholder.innerText = `Prezzo scontato solo per under18 e over65: ${priceDiscounted.toFixed(
+    2
+  )}€`;
+  agePlaceholder.innerText = `${userAge} Anni`;
+  kmPlaceholder.innerText = `La tua tratta è di ${kilometers} Km`;
 }
