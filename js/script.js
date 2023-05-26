@@ -35,18 +35,34 @@ console.log(userAge + " Age");
 console.log(kilometers + " Km");
 
 // 4. Validation
+let isValid = true;
+let error = null;
+
+if (!kilometers) {
+  isValid = false;
+  error = "Km must be a number greater than 0.\n";
+}
+
+if (!userAge || userAge < 1 || userAge > 104) {
+  isValid = false;
+  error += "You must enter an age ranging from 1 to 104.";
+}
 
 // 5. 6. 7. 8. Calculated the price of the ticket and the discounted ticket
 
-let priceTicket = kilometers * priceKm;
-console.log(priceTicket);
+if (!isValid) {
+  alert(error);
+} else {
+  let priceTicket = kilometers * priceKm;
+  console.log(priceTicket);
 
-let priceDiscounted = priceTicket;
+  let priceDiscounted = priceTicket;
 
-if (userAge < ageMinors) {
-  priceDiscounted = priceTicket - (priceTicket * discountMinors) / 100;
-} else if (userAge > ageSenior) {
-  priceDiscounted = priceTicket - (priceTicket * discountSenior) / 100;
+  if (userAge < ageMinors) {
+    priceDiscounted = priceTicket - (priceTicket * discountMinors) / 100;
+  } else if (userAge > ageSenior) {
+    priceDiscounted = priceTicket - (priceTicket * discountSenior) / 100;
+  }
+
+  console.log(priceDiscounted);
 }
-
-console.log(priceDiscounted);
